@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane accessibleRole="COMBO_BOX" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cafe.OrderDonutsController">
+   <children>
+      <ComboBox fx:id="type" layoutX="41.0" layoutY="80.0" onAction="#displayItems" prefWidth="150.0" promptText="type" />
+      <ListView fx:id="flavors" layoutX="28.0" layoutY="132.0" prefHeight="200.0" prefWidth="200.0" />
+      <ListView fx:id="addedListItems" layoutX="352.0" layoutY="132.0" prefHeight="200.0" prefWidth="200.0" />
+      <Button fx:id="addButton" layoutX="406.0" layoutY="359.0" mnemonicParsing="false" onAction="#addToOrder" text="add to order" />
+      <Label layoutX="241.0" layoutY="21.0" text="Ordering Donuts" />
+      <ImageView fitHeight="106.0" fitWidth="134.0" layoutX="382.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/donuts2.jpeg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="subTotal" editable="false" layoutX="255.0" layoutY="359.0" prefHeight="27.0" prefWidth="124.0" />
+      <Label layoutX="191.0" layoutY="364.0" text="sub-total" />
+      <ComboBox fx:id="quantity" accessibleRole="LIST_ITEM" layoutX="241.0" layoutY="132.0" prefHeight="27.0" prefWidth="104.0" promptText="quantity" />
+      <Button fx:id="addDonut" layoutX="259.0" layoutY="200.0" mnemonicParsing="false" onAction="#addDonut" text="&gt;&gt;" />
+      <Button fx:id="removeDonut" layoutX="259.0" layoutY="250.0" mnemonicParsing="false" onAction="#removeDonuts" text="&lt;&lt;" />
+   </children>
+</AnchorPane>
